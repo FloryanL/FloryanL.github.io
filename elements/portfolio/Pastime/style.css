@@ -1,0 +1,195 @@
+/*commentaire*/
+body {
+    margin: 0;
+}
+.container {
+    height: 2355px;
+    width: 100%;
+    margin: auto;
+}
+header {
+    background-color: #eeeeee;
+    opacity: 0.8;
+    height: 105px;
+    width: 100%;
+    margin: auto;
+}
+/* le titre "Pastime" */
+.title p {
+    font-size: 40px;
+    font-family: "News Cycle";
+    font-weight: bold;
+    float: left;
+    margin: 0px 0% 0% 23.8%;
+    padding: 1%;
+}
+.title p a {
+    text-transform: capitalize;
+    color: #2B3F48;
+}
+.title p a:active {
+    color: #27ae61;
+}
+/* la navbar */
+nav {
+    height: 100%;
+    width: 43.8%;
+    margin: 0% 0% 0% 32.5%;
+    text-align: right;
+    text-transform: uppercase;
+}
+nav ul {
+    margin: 0%;
+    list-style:none;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav ul li {
+    
+    margin: 5.5% 2%;
+}
+nav li a {
+    color: #2B3F48;
+}
+a {
+    font-family: "News Cycle";
+    text-transform: uppercase;
+    text-decoration: none;
+}
+nav a:hover {
+    color: #27ae61;
+}
+/* les 3 blocs */
+.bloc1 {
+    max-height: 100%; 
+    width: 100%;
+    padding: 1% 0%;
+    background-color: #27ae61;
+    background-image: url("images/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bloc2{
+    background-color: #eeeeee;
+    opacity: 0.8;
+    max-height: 100%; 
+    width: 100%;
+    padding: 8% 0%;
+}
+.bloc3{
+    background-color: #36AF6A;
+    max-height: 100%; 
+    width: 100%;
+    padding: 8% 0%;
+}
+/*les 3 portraits*/
+.portraits {
+    width: 1000px;
+    margin: 3% auto;
+    text-align: center;
+}
+#portrait_1 {
+    background-image: url("images/pic01.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#portrait_2 {
+    background-image: url("images/pic02.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#portrait_3 {
+    background-image: url("images/pic03.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.cercle {
+    /*overflow: hidden;*/
+    display: inline-block;
+    border-radius: 190px;
+    width: 160px;
+    height: 160px;
+    margin: 0% 2%;
+    padding: 1%;
+}
+.texte {
+    color: white;
+    height: 33%;
+    width: 1000px;
+    margin: auto;
+}
+#texte2 {
+    color: #2B3F48;
+    height: 33%;
+    width: 1000px;
+    margin: auto;
+}
+h1 {
+    font-size: 55px;
+    font-family: "News Cycle";
+    text-align: center;
+}
+h3 {
+    font-size: 22px;
+    font-family: "News Cycle";
+    text-align: center;
+}
+.paragraphe {
+    text-align: center;
+    font-family: "News Cycle";
+    font-size: 17px;
+    margin: 6% 0% 3%;
+}
+button  {
+    font-size: 17px;
+    height: 65px;
+    width: 260px;
+    display: block;
+    border-radius: 10px;
+    letter-spacing: 5px;
+}
+#bouton1 {
+    margin: 6% auto;
+    background: #2B3F48;
+    border-color: #27ae61;
+}
+#bouton1 a {
+    color: white;
+}
+#bouton2 {
+    margin: 6% auto;
+    background: #27ae61;
+}
+#bouton2 a {
+    color: white;
+}
+#bouton3 {
+    margin: 6% auto;
+    background: white;
+}
+#bouton3 a {
+    color: #27ae61;
+}
+footer {
+    background-color: #eeeeee;
+    opacity: 0.8;
+    width: 100%;
+    height: 6%;
+}
+footer p{
+    color: #000000;
+    font-family: "News Cycle";
+    text-align: center;
+    padding: 3% 0%;
+    margin: auto;
+    letter-spacing: 5px;
+}
+footer p a {
+    float: right;
+    margin-right: 1%;
+    letter-spacing: 0px;
+    color: #2B3F48;
+    opacity: 0.5; 
+}
