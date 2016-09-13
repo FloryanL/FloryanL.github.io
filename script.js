@@ -7,6 +7,7 @@ var popup;
 function open_challenge() {
     popup = window.open('elements/images/maquette2.png', 'Projet1', 'menubar=no, scrollbars=no, top=200, left=700, width=400, height=600');
 }
+
 $(document).ready(function () {
     // au clic sur un lien
     $('a[href^="#"]').click(function () {
