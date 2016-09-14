@@ -1,34 +1,65 @@
+//////////////////////////
+/////// formulaire ///////
+//////////////////////////
+
 function myFunction() {
     alert("formulaire non fonctionnel");
 }
 
-var popup;
+//////////////////////////
+///////// popup //////////
+//////////////////////////
 
-function open_challenge() {
-    popup = window.open('elements/images/maquette2.png', 'Projet1', 'menubar=no, scrollbars=no, top=200, left=700, width=400, height=600');
+var popup;
+function open_challenge(item) {
+    // popup = window.open('elements/images/maquette2.png', 'Projet1', 'menubar=no, scrollbars=no, top=200, left=700, width=400, height=600');
+
+    var img = $(item);
+    var modal = $('.js-popup-' + img.attr('data-target') + '-content');
+
+    var captionText = $("#caption", modal);
+    
+    modal.show();
+    captionText.innerHTML = this.alt;
+
+    // $(item).popup();
 }
 
-/*Jquery
-$(document).ready(function () {
+////////////////////////////////////////
+///////// scroll anim section //////////
+////////////////////////////////////////
 
-    $('a[href^="#"]').click(function () {
+function pageScroll(delay) {
+    $('.js-section > a').bind('click', function (e) {
+        e.preventDefault();
 
-        evt.preventDefault();
+        var anchor = $(this);
+        var href = anchor.attr('href');
+        var offset = $('body').attr('data-offset');
 
-        var target = $(this).attr('href');
+        $('html, body').stop().animate({
+            scrollTop: $(href).offset().top - (offset - 1)
+        }, delay, 'easeInOutExpo');
 
-        $('html, body')
-
-            .stop()
-
-            .animate({ scrollTop: $(target).offset().top }, 1000);
+        /*
+         * Automatically retract the navigation after clicking 
+         * on one of the menu items.
+         */
+        // if (!$(this).parent().hasClass('dropdown'))
+        //     $('.main-collapse').collapse('hide');
     });
-});
-*/
+};
 
-// au clic sur un lien
-// bloquer le comportement par défaut: on ne rechargera pas la page
-// enregistre la valeur de l'attribut  href dans la variable target
-//le sélecteur $(html, body) permet de corriger un bug sur chrome et safari (webkit)
-// on arrête toutes les animations en cours 
-// on fait maintenant l'animation vers le haut (scrollTop) vers notre ancre target
+
+$(function () {
+    $('.js-popup').click(function () {
+        open_challenge(this);
+    });
+
+    $(".js-popup-close").click(function () {
+        var modal = $(this).parent();
+        modal.hide();
+    });
+
+    pageScroll(1500);
+});
