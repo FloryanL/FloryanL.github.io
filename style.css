@@ -1,8 +1,5 @@
 /* color: #123EAB; #FF7600; #FFD500;
-@media screen and (max-width: 320px)
-{ }
-@media screen and (max-width: 768px)
-{ } 
+
 font-family: 'Orbitron', sans-serif;
 font-family: 'Audiowide', cursive;
 font-family: 'Courgette', cursive; */
@@ -22,7 +19,7 @@ header {
     color: #C9BBAB;
     height: 100vh;
     background-image: url(elements/images/black-dreams.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
 }
@@ -75,7 +72,7 @@ h2 {
 #section2 {
     background-image: url(elements/images/background1.png);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .xp {
     height: 100vh;
@@ -192,7 +189,7 @@ img {
 #section3 {
     background-image: url(elements/images/background1.png);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
     color: #FF7600;
 }
 #langages {
@@ -220,7 +217,7 @@ img {
 #section4 {
     background-image: url(elements/images/numerique_emploi.png);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .contact {
     height: 94vh;
@@ -284,6 +281,11 @@ footer a:hover {
 /* ================================== */
 /* ======== media queries =========== */
 /* ================================== */
+
+/*
+@media screen and (max-width: 320px) { }
+@media screen and (max-width: 768px) { } 
+*/
 
 @media only screen and (min-width : 1280px) and (max-width : 1824px) {
 
