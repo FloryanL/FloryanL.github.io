@@ -21,7 +21,8 @@ body {
 header {
     color: #C9BBAB;
     height: 100vh;
-    background-image: url(elements/images/digital-art.png);
+    background-image: url(elements/images/black-dreams.png);
+    background-size: 100%;
     background-repeat:no-repeat;
     background-attachment: fixed;
 }
@@ -199,7 +200,7 @@ img {
     margin-top: 6vh;
     font-family: 'Audiowide', 'cursive';
     font-size: 3.5vh;
-    background-image: url(elements/images/background.png);
+    background-image: url(elements/images/background2.png);
     background-repeat:no-repeat;
     background-size: 100% 100%;
     box-shadow: 0 0 25px #111;
@@ -288,7 +289,7 @@ footer a:hover {
 
     .nav {
     text-transform: uppercase;
-    font-size: 1.8vh;
+    font-size: 2vh;
     opacity: 0.8;
     }
 
@@ -303,4 +304,5 @@ footer a:hover {
         padding-bottom: 0.5em;
         font-size: 25px;
     }
+    
 }
