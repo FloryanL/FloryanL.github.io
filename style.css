@@ -235,6 +235,7 @@ form {
     font-size: 2vh;
 }
 input {
+    width: 100%;
     margin: 3vh 0;
     padding: 2vh 0;
     border-radius: 0.5vh;
@@ -243,6 +244,7 @@ input {
     border: #FF7600 solid 1px;
 }
 textarea {
+    width: 100%;
     margin: 2vh 0;
     border-radius: 0.5vh;
     background: #222222;
@@ -282,23 +284,44 @@ footer a:hover {
 /* ======== media queries =========== */
 /* ================================== */
 
-/*
-@media screen and (max-width: 320px) { }
-@media screen and (max-width: 768px) { } 
-*/
+@media only screen and (max-width: 425px) {
+
+    #maquette2 {
+        visibility: hidden;
+    }
+
+    #section4 {
+        background-image: url(elements/images/numerique_emploi.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        margin-bottom: -7vh;
+    }
+    button {
+        margin: 1vh 14vh;
+    }
+    footer {
+        background: #222222;
+        color: #305F91;
+        font-size: 2vh;
+        height: 14vh;
+        padding: 1.5vh 0;
+    }
+ }
+
+/* @media only screen and (max-width: 768px) { } */
 
 @media only screen and (min-width : 1280px) and (max-width : 1824px) {
 
     .nav {
-    text-transform: uppercase;
-    font-size: 2vh;
-    opacity: 0.8;
+        text-transform: uppercase;
+        font-size: 2vh;
+        opacity: 0.8;
     }
 
 	#aboutme {
-    font-family: 'Bad Script', sans-serif;
-    font-size: 2.5vh;
-    color: #FF7600;
+        font-family: 'Bad Script', sans-serif;
+        font-size: 2.5vh;
+        color: #FF7600;
     }
     
     h1 {
