@@ -64,6 +64,9 @@ h2 {
     background: #123EAB;
     color: #FFD500;
 }
+#menu-phone {
+    visibility: hidden;
+}
 
 /* ================================== */
 /* ======= section portfolio ======== */
@@ -118,6 +121,7 @@ img {
     overflow: auto; 
     background-color: rgba(0,0,0,0.9); /*color & opacité */
 }
+
 .js-popup-challenge2-content {
     display: none; 
     position: fixed; 
@@ -128,7 +132,7 @@ img {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.9); /*color & opacité */
+    background-color: rgba(0,0,0,0.9); 
 }
 
 /* Modal folio */
@@ -286,10 +290,6 @@ footer a:hover {
 
 @media only screen and (max-width: 425px) {
 
-    #maquette2 {
-        visibility: hidden;
-    }
-
     .navbar-toggle {
         position: relative;
         float: right;
@@ -302,7 +302,21 @@ footer a:hover {
         border: 1px solid transparent;
         border-radius: 4px;
     }
-
+    #name {
+         float: left;
+         padding-left: 2vh;
+    }
+    #menu {
+        visibility: hidden;
+    }
+    .folio {
+        max-height: 40vh;
+    }
+    .close {
+        color: #FF7600;
+        top: 65vh;
+        right: 3vh;
+    }   
     #section4 {
         background-image: url(elements/images/numerique_emploi.png);
         background-repeat:no-repeat;
