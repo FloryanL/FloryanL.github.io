@@ -64,9 +64,6 @@ h2 {
     background: #123EAB;
     color: #FFD500;
 }
-#menu-phone {
-    visibility: hidden;
-}
 
 /* ================================== */
 /* ======= section portfolio ======== */
@@ -78,7 +75,7 @@ h2 {
     background-size: cover;
 }
 .xp {
-    height: 100vh;
+    min-height: 100vh;
 }
 img {
     background-repeat: no-repeat;
@@ -101,11 +98,11 @@ img {
     color: #FFD500;
 }
 
-#maquette1 {
+.js-popup {
     cursor: pointer;
     transition: 0.3s;
 }
-#maquette1:hover {
+.js-popup:hover {
     opacity: 0.6;
 }
 
@@ -290,7 +287,7 @@ footer a:hover {
 
 @media only screen and (max-width: 425px) {
 
-    .navbar-toggle {
+   /* .navbar-toggle {
         position: relative;
         float: right;
         padding: 9px 10px;
@@ -308,13 +305,14 @@ footer a:hover {
     }
     #menu {
         visibility: hidden;
-    }
+    }*/
     .folio {
         max-height: 40vh;
+        margin-top: 14vh;
     }
     .close {
         color: #FF7600;
-        top: 65vh;
+        top: 80vh;
         right: 3vh;
     }   
     #section4 {
