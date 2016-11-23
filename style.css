@@ -1,8 +1,5 @@
 /* color: #123EAB; #FF7600; #FFD500;
-@media screen and (max-width: 320px)
-{ }
-@media screen and (max-width: 768px)
-{ } 
+
 font-family: 'Orbitron', sans-serif;
 font-family: 'Audiowide', cursive;
 font-family: 'Courgette', cursive; */
@@ -11,6 +8,10 @@ body {
     margin: 0;
     font-family: 'Audiowide', 'cursive';
     line-height: 1.5;
+    background-image: url(elements/images/section-bg.png);
+    background-size: cover;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
 }
 
 
@@ -21,19 +22,10 @@ body {
 header {
     color: #C9BBAB;
     height: 100vh;
-    background-image: url(elements/images/black-dreams.png);
-    background-size: 100%;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
 }
 .accueil {
     margin-top: 15em;
     padding: 0vh 2vh 2vh;
-    background: black;
-    box-shadow: 0 0 25px #111;
-    -webkit-box-shadow: 0 0 25px #111;
-    -moz-box-shadow: 0 0 25px #111;
-    opacity: 0.8;
     font-size: 2.5vh;
     font-weight: 800;
     border-radius: 5vh;
@@ -51,6 +43,7 @@ h2 {
     font-family: 'Orbitron', sans-serif;
     font-weight: bold;
     color: #FF7600;
+    opacity: 0.8;
     padding-left: 10vh;
     margin: 9vh 0 4vh;
 }
@@ -58,27 +51,75 @@ h2 {
 /* ================================== */
 /* ============= navbar ============= */
 /* ================================== */
-.nav {
+.name {
+    color: #FF7600;
+}
+.name:hover {
+    color: #FFD500;
+}
+#sticky {
     text-transform: uppercase;
+    background: transparent;
     font-size: 2.2vh;
     opacity: 0.8;
 }
 .nav > li > a:hover, .nav > li > a:focus {
-    background: #123EAB;
+    background: transparent;
     color: #FFD500;
+}
+.icon-bar {
+    background: #123EAB;
+}
+button:active {
+    background: #FFD500 !important;
+}
+.container-fluid > .navbar-collapse:active {
+    /*display: block;*/
+    color: #123EAB;
+    background: #202020;
+    opacity: 0.8;
+}
+
+/* ================================== */
+/* ======= section compétences ====== */
+/* ================================== */
+
+#section2 {
+    background-image: url(elements/images/background1.png);
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #FF7600;
+}
+#langages {
+    padding: 7vh 3vh;
+    margin-top: 6vh;
+    font-family: 'Audiowide', 'cursive';
+    font-size: 3.5vh;
+    background-image: url(elements/images/background2.png);
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0 0 25px #111;
+    -webkit-box-shadow: 0 0 25px #111;
+    -moz-box-shadow: 0 0 25px #111;
+    opacity: 0.8;
+    border-radius: 1vh;
+}
+.domaine {
+    height: 100vh;
 }
 
 /* ================================== */
 /* ======= section portfolio ======== */
 /* ================================== */
 
-#section2 {
-    background-image: url(elements/images/background1.png);
+#section3 {
+    /*background-image: url(elements/images/background1.png);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;*/
+    color: #FF7600;
 }
 .xp {
-    height: 100vh;
+    min-height: 100vh;
 }
 img {
     background-repeat: no-repeat;
@@ -101,11 +142,11 @@ img {
     color: #FFD500;
 }
 
-#maquette1 {
+.js-popup {
     cursor: pointer;
     transition: 0.3s;
 }
-#maquette1:hover {
+.js-popup:hover {
     opacity: 0.6;
 }
 
@@ -121,6 +162,7 @@ img {
     overflow: auto; 
     background-color: rgba(0,0,0,0.9); /*color & opacité */
 }
+
 .js-popup-challenge2-content {
     display: none; 
     position: fixed; 
@@ -131,7 +173,7 @@ img {
     width: 100%; 
     height: 100%; 
     overflow: auto; 
-    background-color: rgba(0,0,0,0.9); /*color & opacité */
+    background-color: rgba(0,0,0,0.9); 
 }
 
 /* Modal folio */
@@ -178,39 +220,13 @@ img {
     font-size: 5vh;
     font-weight: bold;
     transition: 0.3s;
+    opacity: inherit;
 }
 .close:hover, .close:focus {
     color: #FFD500;
     text-decoration: none;
     cursor: pointer;
-}
-
-/* ================================== */
-/* ======= section compétences ====== */
-/* ================================== */
-
-#section3 {
-    background-image: url(elements/images/background1.png);
-    background-repeat:no-repeat;
-    background-size: 100%;
-    color: #FF7600;
-}
-#langages {
-    padding: 7vh 3vh;
-    margin-top: 6vh;
-    font-family: 'Audiowide', 'cursive';
-    font-size: 3.5vh;
-    background-image: url(elements/images/background2.png);
-    background-repeat:no-repeat;
-    background-size: 100% 100%;
-    box-shadow: 0 0 25px #111;
-    -webkit-box-shadow: 0 0 25px #111;
-    -moz-box-shadow: 0 0 25px #111;
-    opacity: 0.8;
-    border-radius: 1vh;
-}
-.domaine {
-    height: 100vh;
+    opacity: inherit;
 }
 
 /* ================================== */
@@ -218,18 +234,19 @@ img {
 /* ================================== */
 
 #section4 {
-    background-image: url(elements/images/numerique_emploi.png);
+    background-color: #161616;
+    background-image: url(elements/images/large-bg.png);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: cover;
 }
 .contact {
     height: 94vh;
 }
 form {
-    background-color: #202020;
-    box-shadow: 0 0 25px #111;
+    /*background-color: #161616;*/
+    /*box-shadow: 0 0 25px #111;
     -webkit-box-shadow: 0 0 25px #111;
-    -moz-box-shadow: 0 0 25px #111;
+    -moz-box-shadow: 0 0 25px #111;*/
     color: azure;
     margin: 3vh auto 0;
     opacity: 0.9;
@@ -238,31 +255,30 @@ form {
     font-size: 2vh;
 }
 input {
+    width: 100%;
     margin: 3vh 0;
     padding: 2vh 0;
     border-radius: 0.5vh;
-    background: #222222;
+    background: transparent;
     color: #FFD500;
     border: #FF7600 solid 1px;
 }
 textarea {
+    width: 100%;
     margin: 2vh 0;
     border-radius: 0.5vh;
-    background: #222222;
+    background: transparent;
     color: #FFD500;
     border: #FF7600 solid 1px;
 }
+
 button {
-    background: #222222;
+    background: #161616;
     color: #305F91;
     border: #FF7600 outset 0.5vh;
     border-radius: 0.5vh;
     margin: 1vh 0;
     padding: 0.5vh 0;
-}
-button:hover {
-    background: #123EAB;
-    color: #FFD500;
 }
 
 /* ================================== */
@@ -270,7 +286,7 @@ button:hover {
 /* ================================== */
 
 footer {
-    background: #222222;
+    background: #161616;
     color: #305F91;
     font-size: 2vh;
     height: 6vh;
@@ -285,18 +301,73 @@ footer a:hover {
 /* ======== media queries =========== */
 /* ================================== */
 
+@media only screen and (max-width: 425px) {
+
+   /* .navbar-toggle {
+        position: relative;
+        float: right;
+        padding: 9px 10px;
+        margin-top: 8px;
+        margin-right: 15px;
+        margin-bottom: 8px;
+        background-color: transparent;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 4px;
+    }
+    #name {
+         float: left;
+         padding-left: 2vh;
+    }
+    #menu {
+        visibility: hidden;
+    }*/
+    .folio {
+        max-height: 40vh;
+        margin-top: 14vh;
+    }
+    .close {
+        color: #FF7600;
+        top: 80vh;
+        right: 3vh;
+    }   
+    #section4 {
+        background-image: url(elements/images/numerique_emploi.png);
+        background-repeat:no-repeat;
+        background-size: cover;
+        margin-bottom: -7vh;
+    }
+    button {
+        margin: 1vh 14vh;
+    }
+    footer {
+        background: #222222;
+        color: #305F91;
+        font-size: 2vh;
+        height: 14vh;
+        padding: 1.5vh 0;
+    }
+ }
+
+/*
+@media only screen and (max-width: 430px) and (max-width: 1024px) {
+    footer {
+        min-height: 6vh !important;
+    }
+ }*/ 
+
 @media only screen and (min-width : 1280px) and (max-width : 1824px) {
 
     .nav {
-    text-transform: uppercase;
-    font-size: 2vh;
-    opacity: 0.8;
+        text-transform: uppercase;
+        font-size: 2vh;
+        opacity: 0.8;
     }
 
 	#aboutme {
-    font-family: 'Bad Script', sans-serif;
-    font-size: 2.5vh;
-    color: #FF7600;
+        font-family: 'Bad Script', sans-serif;
+        font-size: 2.5vh;
+        color: #FF7600;
     }
     
     h1 {
