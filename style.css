@@ -301,10 +301,11 @@ footer a:hover {
 /* ======== media queries =========== */
 /* ================================== */
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 425px) and (orientation: landscape) {
 
    #shownav {
        display: none;
+       background-color: #161616;
    }
     .folio {
         max-height: 40vh;
@@ -347,17 +348,14 @@ footer a:hover {
         font-size: 2vh;
         opacity: 0.8;
     }
-
 	#aboutme {
         font-family: 'Bad Script', sans-serif;
         font-size: 2.5vh;
         color: #FF7600;
     }
-    
     h1 {
         font-family: 'Orbitron', sans-serif;
         padding-bottom: 0.5em;
         font-size: 25px;
     }
-    
 }
