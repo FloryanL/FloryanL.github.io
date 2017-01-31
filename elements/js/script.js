@@ -11,7 +11,6 @@ function myFunction() {
 //////////////////////////
 
 var popup;
-
 function open_challenge(item) {
     // popup = window.open('elements/images/maquette2.png', 'Projet1', 'menubar=no, scrollbars=no, top=200, left=700, width=400, height=600');
 
@@ -19,7 +18,7 @@ function open_challenge(item) {
     var modal = $('.js-popup-' + img.attr('data-target') + '-content');
 
     var captionText = $("#caption", modal);
-
+    
     modal.show();
     captionText.innerHTML = this.alt;
 
@@ -51,6 +50,7 @@ function pageScroll(delay) {
     });
 };
 
+
 $(function () {
     $('.js-popup').click(function () {
         open_challenge(this);
@@ -75,4 +75,4 @@ function navisib(nav) {
     } else {
         document.getElementById(nav).style.display = "block";
     }
-}
+} 
