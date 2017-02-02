@@ -297,11 +297,12 @@ img {
     text-decoration: none;
 }
 .contact_satellite {
-    margin: 4% 0;
+    margin: 4% 0 4% 0;
     height: 150px;
     width: auto;
     background-size: cover;
     background-repeat: no-repeat;
+    display: none;
 }
 .contactme {
     color: #337ab7;
@@ -455,5 +456,17 @@ footer {
         padding-bottom: 0.5em;
         font-size: 25px;
     }
-    
+    .contact_satellite {
+        margin: 2% 0 2% -2%;
+        height: 140px;;
+        width: auto;
+        display: block;
+    }
+    .contactme {
+        margin-top: 2vh;
+        font-size: 16px;
+    }
+    .icon-so {
+        margin: 6% 2.5%;
+    }
 }
