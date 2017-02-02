@@ -413,6 +413,7 @@ footer {
         text-align: center;
     }
     .contact_satellite {
+        margin-left: 12.5vh;
         margin-bottom: 5vh;
         height: 100px;
         width: auto;
