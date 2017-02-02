@@ -290,7 +290,7 @@ img {
     margin-bottom: 8vh;
 }
 .block_contact {
-    margin-top: 12%;
+    margin-top: 20%;
 }
 .contact a:hover {
     color: #DAA520;
@@ -455,6 +455,9 @@ footer {
         font-family: 'Orbitron', sans-serif;
         padding-bottom: 0.5em;
         font-size: 25px;
+    }
+    .block_contact {
+        margin-top: 12%;
     }
     .contact_satellite {
         margin: 2% 0 2% -2%;
