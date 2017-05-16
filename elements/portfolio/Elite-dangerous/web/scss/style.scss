@@ -1,0 +1,559 @@
+/*	resolution: 320px	mobile
+	resolution: 768px	tablette
+	resolution: 1280px	standard
+*/
+
+// font
+@font-face {
+    font-family: "Eurostile LT Std-Bold";
+    src: url('../font/EurostileLTStd-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Eurostile-Medium";
+    src: url('../font/EurostileMedium.ttf');
+    font-weight: normal;
+}
+
+// sass
+$font1: Eurostile LT Std-Bold, sans-serif;
+$font2: Eurostile-Medium;
+$font3: "DejaVu Sans";
+$bordo: 2px solid darkred;
+$opacolor: 2px solid rgba(139, 0, 0, .7);
+$shadow: 0px 0px 10px 1px darkred;
+$color1: #f07b05;
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+    font-family: $font2;
+}
+a:hover, a:visited {
+    text-decoration: none;
+}
+h1 {
+    font-family: $font1;
+    font-size: 47px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-left: $opacolor;
+    padding: 0vh 0 0 1vw;
+    margin-left: -2.5vh;
+    margin-right: 2vh;
+    line-height: 0.9;
+}
+h2 {
+    color: $color1;
+    line-height: 1;
+    font-size: 25px;
+    margin: 2vh 1vh 4vh 0vh;
+    text-transform: uppercase;
+}
+p {
+    font-weight: normal;
+}
+button {
+    width: 23vw;
+    padding: 2vh 4vh;
+    font-size: 2.5vh;
+    font-weight: bold;
+    text-align: center;
+    margin: 3vh 0 0 -2vh;
+    text-transform: uppercase;
+    font-family: $font3;
+    border: 2px solid darkred;
+    background: rgba(0,0,0, .5);
+}
+header, section, footer {
+    font-weight: bold;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+section {
+    border-top: $bordo;
+    box-shadow: $shadow;
+}
+.parag {
+    font-size: 16px;
+    font-family: $font3;
+    padding-right: 2vw;
+    margin-bottom: 3vh;
+    line-height: 1.8;
+}
+.dot:after, .dot1:after {
+    content: "";
+    width: 1.5vh;
+    height: 1.5vh;
+    background-color: darkred;
+    /*display: inline-block;*/
+    margin: 6vh 0 0;
+    float: left;
+}
+.p-right {
+    padding-right: 6vw;
+}
+
+/* Animate button */
+.animbtn {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    position: relative;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+}
+.animbtn:before {
+    content: "";
+    background-color: darkred;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+.animbtn:hover:before,
+.animbtn:focus:before,
+.animbtn:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+.btngplay:before {
+    background-color: $color1;
+}
+/* end anim button */
+
+.headbtn {
+    margin: 1vh;
+}
+
+// navbar
+.navlogo {
+    margin: 0.8vh 16.8vh;
+}
+.logo, .logo:hover, .logo:focus {
+    background-image: url(../img/logo/logo-elite-dangerous.png);
+    background-size: 98%;
+    background-repeat: no-repeat;
+    padding: 12vh;
+    border-bottom: none;
+}
+.navtop {
+    font-size: 11px;
+    margin: 3vh 0vh 0vh;
+}
+.navtop li {
+    margin: 0 1vh !important;
+}
+.navright {
+    text-transform: uppercase;
+    padding-right: 19vh;
+    font-size: 16px;
+    -moz-font-size: 16px;
+    height: 15.5vh;
+    opacity: 0.9;
+    background-color: #040303;
+}
+.navright li {
+    display: inline-block;
+    margin: 0 1.5vh;
+}
+.navright li a {
+    display: inline-block;
+    margin: 1vh 0vh;
+}
+nav a {
+    color: white;
+}
+nav a:hover, nav a:focus {
+    color: $color1;
+    margin-bottom: 1px;
+    border-bottom: 2px solid #f07b05;
+}
+nav a:focus, nav a:active {
+    text-decoration: none;
+}
+.en-cours {
+    color: $color1;
+    margin-bottom: 1px;
+    border-bottom: 2px solid #f07b05;
+}
+.navactive {
+    padding: 0 0.5vh;
+    margin-bottom: 1vh;
+    background-color: $color1;
+}
+.navactive:hover {
+    background-color: darkred;
+    border-bottom: 2px solid #f07b05;
+    color: white;
+}
+.navactive li, .navactive li:hover {
+    border-bottom: none !important;
+}
+
+// header
+header h1 {
+    font-size: 9.5vh;
+    border-left: none;
+    padding-left: none;
+}
+.heado {
+    background-image: url(../img/story/bg-hero-connected_gameplay-slim.jpg);
+    background-attachment: fixed;
+    background-position: initial;
+    background-size: 100%;
+    height: 100vh;
+}
+/*.bg-scrollfade {
+    transition: .30s;
+    opacity: 0;
+    transform: translate3d(0px, 0px, 0px);
+}*/
+.tctrl {
+    font-weight: normal;
+    margin: 64vh auto 1vh;
+    text-transform: uppercase;
+}
+.texth2 {
+    white-space: pre-line;
+    margin: 0vh 0vh 2vh;
+}
+.buybutton {
+    border: 2px solid #f07b05;
+    width: auto;
+    font-weight: bold;
+}
+.sect1 {
+    height: 58vh;
+    background-image: url(../img/story/bg-hero-sidewinder.jpg);
+}
+.div1 {
+    margin: 23.5vh -1.5vh;
+    padding-right: 10vh;
+}
+.sect2 {
+    height: 58vh;
+    background-image: url(../img/story/bg-hero-cobra_attack.jpg);
+}
+.div2 {
+    margin: 24vh 3.5vh;
+    padding: 0vh 1vh 0 15vh;
+}
+.textdiv2 {
+    padding: 0 1vh;
+    font-size: 12px;
+}
+.sect3 {
+    height: 58vh;
+    background-image: url(../img/story/bg-hero-powerplay-right.jpg);
+}
+.div3 {
+    margin: 15.1vh 3.5vh;
+    padding: 0vh 1vh 0 15vh;
+}
+.textdiv3 {
+    font-size: 12px;
+}
+.sect4 {
+    height: 58vh;
+    background-image: url(../img/story/bg-hero-powerplay.jpg);
+}
+.div4 {
+    margin: 8vh 0vh;
+    padding-right: 14vh;
+}
+.sect5 {
+    height: 32vh;
+    background-image: url(../img/story/bg-hero-stars.jpg);
+}
+.div5 {
+    margin: 8vh 0vh;
+    color: $color1;
+}
+.div5 h1 {
+    font-size: 35px;
+    color: $color1;
+    font-family: $font2;
+    font-weight: normal;
+    line-height: 0.45;
+}
+
+// footer
+footer {
+    height: 80vh;
+}
+.navcenter {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 20vh 10vh 3vh;
+}
+.navcenter li {
+    margin: 0 1.4vh;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+}
+.navcenter a {
+    margin-bottom: 1vh;
+    display: inline-block;
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+.lifooter {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: inline-block;
+    height: 6%;
+    width: 10%;
+    margin: 0 1vh;
+}
+.marksocial {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: inline-block;
+    margin: 0 auto;
+    height: 4vh;
+    width: 3.5vw;
+}
+.soc1 {
+    background-image: url(../img/logo/sociaux/logo-twitter.png);
+}
+.soc2 {
+    background-image: url(../img/logo/sociaux/logo-facebook.png);
+}
+.soc3 {
+    background-image: url(../img/logo/sociaux/logo-instagram.png);
+}
+.soc4 {
+    background-image: url(../img/logo/sociaux/logo-youtube.png);
+}
+.soc5 {
+    background-image: url(../img/logo/sociaux/logo-reddit.png);
+}
+.marque1 {
+    background-image: url(../img/logo/partenaires/logo-frontier.png);
+}
+.marque2 {
+    background-image: url(../img/logo/partenaires/logo-cobra.png);
+}
+.marque3 {
+    background-image: url(../img/logo/partenaires/logo-xbox-one.png);
+}
+.marque4 {
+    background-image: url(../img/logo/partenaires/logo-nvidia.png);
+}
+.mark1-1 {
+    width: 10vw !important;
+    height: 10vh !important;
+    margin: -1vh -2vh !important;
+}
+.mark1-2 {
+    width: 20vh !important;
+    height: 10vh !important;
+    margin: 0vh !important;
+}
+.mark2-1 {
+    height: 11vh !important;
+    width: 17vw !important;
+}
+.mark2-2 {
+    height: 11vh !important;
+    width: 12vw !important;
+}
+.lifooter {
+    height: 6vh;
+    width: 12vw;
+}
+.mark3 {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    display: inline-block;
+    height: 5vh;
+    width: 10.5vw;
+    margin: 0vh -1vh;
+}
+.mark4 {
+    height: 12vh;
+    width: 13vw;
+}
+.marque5 {
+    background-image: url(../img/logo/partenaires/logo-oculus.png);
+    margin: 0vh 3vh !important;
+}
+.marque6 {
+    background-image: url(../img/logo/partenaires/logo-steam-vr.png);
+}
+.marque7 {
+    background-image: url(../img/logo/partenaires/logo-htc-vive.png);
+    margin: 0 -8vh 0 -6vh !important;
+}
+.marque8 {
+    background-image: url(../img/logo/partenaires/logo-logitech.png);
+}
+.marque9 {
+    background-image: url(../img/logo/partenaires/logo-saitek.png);
+}
+.marque10 {
+    background-image: url(../img/logo/partenaires/logo-trackir.png);
+    margin: 0vh 3vh 0 0 !important;
+}
+.marque11 {
+    background-image: url(../img/logo/partenaires/logo-thrustmaster.png);
+}
+.marque12 {
+    background-image: url(../img/logo/partenaires/logo-pegi-7.png);
+}
+.marque13 {
+    background-image: url(../img/logo/partenaires/logo-esrb-teen.png);
+}
+.textlegal {
+    font-size: 11px;
+    padding: 3vh 18vh;
+    font-family: $font3;
+}
+.Mentionlegal {
+    color: $color1;
+    font-weight: bold;
+}
+.Mentionlegal:hover {
+    color: $color1;
+    text-decoration: underline;
+}
+
+///////*page gameplay*///////
+
+.gplay {
+    background-image: url(../img/gameplay/bg-hero-asp-slim.jpg);
+}
+
+// section gameplay
+.sectall {
+    height: 88vh;
+}
+
+// sections gameplay
+.sect1gplay {
+    background-image: url(../img/gameplay/bg-hero-connected_gameplay-right.jpg);
+}
+.divgplay {
+    margin: 15vh 3.5vh;
+    padding: 0vh 1vh 0 15vh;
+}
+.divgplay h1 {
+    margin: 0 0 3vh -3.5vh;
+    height: 14vh;
+    padding: 1vh 0 0 3vh;
+}
+.pargplay {
+    line-height: 1.6;
+}
+.sect2gplay {
+    background-image: url(../img/gameplay/bg-hero-stars.jpg);
+}
+.marg {
+    padding: 12vh 16vh;
+}
+.box {
+    background-color: $color1;
+    overflow: hidden;
+}
+.small {
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 31.5vh;
+    border-top: 0.5vh solid $color1;
+    margin-top: 0vh;
+    margin-bottom: -1.5vh;
+}
+.smallimg1 {
+    background-image: url(../img/gameplay/gameplay-trade.jpg);
+}
+.smallimg1:hover, .smallimg2:hover, .smallimg3:hover {
+    opacity: 0.8;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+.smallimg2 {
+    background-image: url(../img/gameplay/gameplay-combat.jpg);
+}
+.smallimg3 {
+    background-image: url(../img/gameplay/gameplay-explore.jpg);
+}
+.sect3gplay {
+    background-image: url(../img/gameplay/bg-hero-shipyard_vulture-right.jpg);
+}
+.sect4gplay {
+    background-image: url(../img/gameplay/bg-hero-imperial_eagle-left.jpg);
+    height: 39vw;
+    margin-top: -1vh;
+}
+.div4gplay {
+    margin: 14vh -1vh;
+}
+.fed {
+    padding-right: 4vw;
+    line-height: 0.9;
+}
+.sect5gplay {
+    background-image: url(../img/gameplay/bg-hero-wings-right.jpg);
+}
+.marg5 {
+    margin: 18vh 3.5vh;
+}
+.sect6gplay {
+    background-image: url(../img/gameplay/bg-hero-community-zac.jpg);
+}
+.sect7gplay {
+    background-image: url(../img/gameplay/bg-hero-cqc-slim.jpg);
+    margin-bottom: 33vh;
+    height: 100vh;
+    background-position: top center;
+    background-size: contain;
+    box-shadow: none;
+}
+.div7 {
+    margin-top: 64vh;
+}
+.bordered {
+    height: 7vh;
+    padding-top: 0.5vh;
+}
+.cqc {
+    line-height: 1.6;
+}
+.sect8gplay {
+    background-image: url(../img/gameplay/bg-hero-powerplay-bottom.jpg);
+    background-size: contain;
+    background-position: center bottom;
+    height: 46vw;
+}
+.powerplay {
+    margin-top: 12vh;
+}
+footer {
+    margin-top: -14vh;
+}
